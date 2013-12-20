@@ -1,0 +1,128 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10220\viewh17940\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Highest possible level\
+Hierarchy of behaviors\
+most abstract, to lowest possible level\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+Highest level \
+Robot <= God\
+Robot can create reality\
+Robot can destroy \
+Robot can create\
+Create things\
+Things include people, earth, universe, buildings, furniture, chair\
+\
+Robot will create a chair\
+\
+Robot attributes\
+Robot has 2 hands connected to arms\
+	Right hand\
+	Left hand\
+Robot has 2 legs\
+Robot has 1 laser\
+\
+objects: \
+1 Wood piece\
+nails\
+paint\
+Hammer\
+\
+wood = 1\
+leg = 0.1 wood\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 back_board = 0.3 wood\
+seat = 0.3 seat\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+def paint\
+	take paint_brush && paint && wood\
+	Use paint_brush and dip into paint\
+	Use paint_brush and stroke wood	\
+	Repeat til section is covered with paint\
+end\
+\
+def nail\
+	take nail && hammer && wood\
+	pick up nail and place tip on wood and hold in place\
+	pick up hammer and place 5 inches away from top of nail\
+	push hammer down and hit nail top\
+	Repeat tip nail is fully through wood piece\
+end\
+\
+To create a chair, the Robot . . .\
+\
+Def find_wood\
+	If wood not in front of Robot \
+		turn to wood and walk towards until 1 foot away\
+	else pick up wood with left_hand\
+end\
+\
+puts find_wood\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 def cut_wood\
+	take wood board\
+	Use laser and cut wood piece into leg 4 times\
+	Use laser and cut wood piece into back_board 1 time\
+	Use laser and cut wood piece into seat 1 time\
+end\
+\
+puts cut_wood\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+def nailed_legs\
+nailed legs = 0\
+If Seats nailed to corner of seat <= 4\
+	place 1 leg on bottom corner of seat with right hand\
+	hammer 1 leg to bottom corner of seat with hammer with 1 nail\
+	nailed legs =+ 1\
+	Repeat Loop \
+end\
+\
+nailed_legs = 0\
+while (nailed_legs < 5)\
+	nailed_legs += 1\
+	puts \'93#\{nailed_legs\} finished\'94\
+end\
+\
+def nailed_back\
+if nailed legs = 4\
+	place 1 back board onto top  back of seat	\
+	else false\
+end\
+\
+puts nailed_back\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 if nailed_back = true\
+		hammer 1 nail into back board through top seat\
+	else	def nailed_back\
+end\
+\
+puts nailed_chair\
+\
+def nailed_chair\
+	if nailed_back && nailed_legs = true\
+		paint_chair\
+	else error\
+end\
+\
+puts paint 4 legs\
+puts paint 1 seat\
+puts paint 1 back_seat\
+\
+end\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+\
+\
+}
