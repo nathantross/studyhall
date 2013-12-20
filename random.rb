@@ -1,4 +1,4 @@
-
+#  here is a comment
 def steps
 	steps = rand(10).to_s
 	end
